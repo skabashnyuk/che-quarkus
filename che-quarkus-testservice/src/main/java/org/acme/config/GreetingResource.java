@@ -13,8 +13,8 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("/greeting")
 public class GreetingResource {
 
-    //@ConfigProperty(name = "greeting.message")
-    @Named("greeting.message")
+    @ConfigProperty(name = "greeting.message")
+    //@Named("greeting.message")
     String message;
 
 //    @ConfigProperty(name = "greeting.suffix", defaultValue="!")
