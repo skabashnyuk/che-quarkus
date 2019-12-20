@@ -1,0 +1,10 @@
+---
+name: "Quarkus Extension for Eclipse CHE DI API"
+metadata:
+  keywords:
+  - "che-di"
+  - "che"
+  guide: "https://github.com/eclipse/che"
+  categories:
+  - "compatibility"
+  status: "preview"

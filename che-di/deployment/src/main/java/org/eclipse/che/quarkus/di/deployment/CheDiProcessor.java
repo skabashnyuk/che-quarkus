@@ -1,4 +1,4 @@
-package io.quarkus.che.di.deployment;
+package org.eclipse.che.quarkus.di.deployment;
 
 import io.quarkus.arc.deployment.AdditionalStereotypeBuildItem;
 import io.quarkus.arc.deployment.AnnotationsTransformerBuildItem;
