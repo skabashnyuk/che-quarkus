@@ -1,21 +1,12 @@
 package io.quarkus.che.di.deployment;
 
-import io.quarkus.arc.processor.AnnotationsTransformer;
-import io.quarkus.deployment.annotations.BuildStep;
-import io.quarkus.deployment.builditem.FeatureBuildItem;
 import io.quarkus.arc.deployment.AdditionalStereotypeBuildItem;
 import io.quarkus.arc.deployment.AnnotationsTransformerBuildItem;
 import io.quarkus.arc.deployment.BeanArchiveIndexBuildItem;
+import io.quarkus.arc.processor.AnnotationsTransformer;
 import io.quarkus.deployment.annotations.BuildProducer;
-import org.jboss.jandex.AnnotationInstance;
-import org.jboss.jandex.DotName;
-import org.jboss.jandex.IndexView;
-
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
+import io.quarkus.deployment.annotations.BuildStep;
+import io.quarkus.deployment.builditem.FeatureBuildItem;
 
 
 class CheDiProcessor {
@@ -39,7 +30,7 @@ class CheDiProcessor {
 
             public void transform(TransformationContext context) {
                 if (context.getTarget().asClass().name().toString().equals("com.foo.Bar")) {
-                    context.transform().add(MyInterceptorBinding.class).done();
+                   // context.transform().add(MyInterceptorBinding.class).done();
                 }
             }
         });
