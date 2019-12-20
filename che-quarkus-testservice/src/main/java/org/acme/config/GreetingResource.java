@@ -2,6 +2,7 @@ package org.acme.config;
 
 import java.util.Optional;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,8 +14,9 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("/greeting")
 public class GreetingResource {
 
-    @ConfigProperty(name = "greeting.message")
-    //@Named("greeting.message")
+    //@ConfigProperty(name = "greeting.message")
+    @Inject
+    @Named("greeting.message")
     String message;
 
 //    @ConfigProperty(name = "greeting.suffix", defaultValue="!")
